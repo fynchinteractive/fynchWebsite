@@ -63,49 +63,24 @@
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
     
-     .logo {
-    max-width: 220px;
+        .logo {
+    max-width: 200px;
     margin: 0 auto 3rem;
     display: block;
-    padding: 14px;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.025);
-    border: 1px solid transparent;
-    background-clip: padding-box;
-    box-shadow:
-    0 0 30px rgba(255,255,255,0.25),
-    0 0 70px rgba(255,255,255,0.18),
-    0 0 120px rgba(123,92,255,0.15);
-    position: relative;
-    animation: logoFloat 8s ease-in-out infinite;
+    padding: 12px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 0 40px rgba(255,255,255,0.45);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
     
-    .logo::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 22px;
-    padding: 0.5px;
-    background: linear-gradient(135deg,
-    rgba(255,255,255,0.55),
-    rgba(255,255,255,0.2),
-    rgba(123,92,255,0.25)
-    );
-    -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    }
     
     .logo:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow:
-    0 0 45px rgba(255,255,255,0.45),
-    0 0 100px rgba(255,255,255,0.35),
-    0 0 160px rgba(123,92,255,0.3);
+    box-shadow: 0 0 70px rgba(255,255,255,0.7);
+    transform: translateY(-2px);
     }
     
     @keyframes logoFloat {
