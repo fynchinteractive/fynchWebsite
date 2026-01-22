@@ -44,10 +44,38 @@
       height: 120px;
       background: linear-gradient(to bottom, rgba(11,11,15,0), rgba(11,11,15,1));
     }
-
+    
     .logo {
-      max-width: 120px;
-      margin: 0 auto 2rem;
+    max-width: 260px;
+    margin: 0 auto 3rem;
+    display: block;
+    padding: 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow:
+    0 0 25px rgba(255,255,255,0.25),
+    0 0 60px rgba(255,255,255,0.15),
+    0 0 90px rgba(123,92,255,0.25);
+    animation: logoFloat 6s ease-in-out infinite;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    
+    .logo:hover {
+    box-shadow:
+    0 0 40px rgba(255,255,255,0.6),
+    0 0 90px rgba(255,255,255,0.4),
+    0 0 140px rgba(123,92,255,0.6);
+    transform: scale(1.06);
+    }
+    
+    @keyframes logoFloat {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-10px) scale(1.04); }
+    100% { transform: translateY(0px) scale(1); }
+    }
+    50% { transform: translateY(-8px) scale(1.03); }
+    100% { transform: translateY(0px) scale(1); }
     }
 
     h1 {
