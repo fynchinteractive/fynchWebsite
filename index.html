@@ -46,27 +46,28 @@
     }
     
         .logo {
-    max-width: 260px;
-    margin: 0 auto 3rem;
+    max-width: 280px;
+    margin: 0 auto 3.5rem;
     display: block;
-    padding: 16px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.35);
+    padding: 18px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+    border: 1px solid rgba(255,255,255,0.25);
     box-shadow:
-    0 0 25px rgba(255,255,255,0.25),
-    0 0 60px rgba(255,255,255,0.15),
-    0 0 90px rgba(123,92,255,0.25);
-    animation: logoFloat 6s ease-in-out infinite;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    0 8px 30px rgba(0,0,0,0.6),
+    0 0 40px rgba(255,255,255,0.18),
+    0 0 80px rgba(123,92,255,0.25);
+    animation: logoFloat 7s ease-in-out infinite;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     }
     
     .logo:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: rgba(255,255,255,0.6);
     box-shadow:
-    0 0 40px rgba(255,255,255,0.6),
-    0 0 90px rgba(255,255,255,0.4),
-    0 0 140px rgba(123,92,255,0.6);
-    transform: scale(1.06);
+    0 12px 40px rgba(0,0,0,0.7),
+    0 0 60px rgba(255,255,255,0.35),
+    0 0 120px rgba(123,92,255,0.45);
     }
     
     @keyframes logoFloat {
