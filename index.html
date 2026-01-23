@@ -199,6 +199,35 @@
       color: var(--text-muted);
       background: var(--black-main);
       border-top: 1px solid rgba(123,92,255,0.1);
+
+    #game {
+      margin-top: 2rem;
+      position: relative;
+      height: 180px;
+    }
+    
+    #target {
+      width: 24px;
+      height: 24px;
+      border: 1px solid white;
+      box-shadow: 0 0 12px rgba(255,255,255,0.6);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    #target:hover {
+      box-shadow: 0 0 24px rgba(255,255,255,0.9);
+    }
+    
+    #score {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
     }
   </style>
 </head>
@@ -211,7 +240,13 @@
       We craft polished, social-first games designed to bring players together — built with care, creativity, and community at the core.
     </p>
   </header>
-
+  
+          <!-- Interactive Mini Game -->
+    <div id="game">
+      <div id="target"></div>
+      <p id="score">Score: 0</p>
+    </div>
+  
   <section>
     <h2 class="section-title">What We Build</h2>
     <div class="grid">
@@ -269,5 +304,28 @@
     © 2026 Fynch Interactive · Built with passion and community in mind
   </footer>
 
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const target = document.getElementById("target");
+  const scoreEl = document.getElementById("score");
+  let score = 0;
+
+  function moveTarget() {
+    const x = Math.random() * 160 - 80;
+    const y = Math.random() * 100 - 50;
+    target.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  target.addEventListener("click", () => {
+    score++;
+    scoreEl.textContent = `Score: ${score}`;
+    moveTarget();
+  });
+
+  moveTarget();
+});
+</script>
+
+  
 </body>
 </html>
