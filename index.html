@@ -201,6 +201,37 @@
       background: var(--black-main);
       border-top: 1px solid rgba(123,92,255,0.1);
     }
+
+    /* Image Carousel */
+  .carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 2rem;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .carousel img {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+    scroll-snap-align: center;
+    box-shadow: 0 0 20px rgba(255,255,255,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .carousel img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(255,255,255,0.25);
+  }
+    
   </style>
 </head>
 <body>
@@ -213,6 +244,17 @@
     </p>
   </header>
 
+  <section>
+    <h2 class="section-title">Our Games</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="images/game1.png" alt="Game screenshot 1">
+        <img src="images/game2.png" alt="Game screenshot 2">
+        <img src="images/game3.png" alt="Game screenshot 3">
+      </div>
+    </div>
+  </section>
+  
     <div class="cta">
     <h2>Play Our Game</h2>
     <p>
