@@ -208,6 +208,8 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 2rem;
+    padding-bottom: 1rem;
+    overflow-y: visible;
   }
   
   .carousel-track {
@@ -217,6 +219,8 @@
   }
   
   .carousel img {
+    position: relative;
+    z-index: 1;
     width: 320px;
     height: 180px;
     object-fit: cover;
