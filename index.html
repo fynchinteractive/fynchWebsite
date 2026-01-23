@@ -134,29 +134,26 @@
       font-size: 0.95rem;
     }
 
-    .founders {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    .founders a {
+      text-decoration: none;
+      color: inherit;
     }
-
+    
     .founder {
       padding: 2rem;
       border-radius: 16px;
       background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
       border: 1px solid rgba(123,92,255,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      cursor: pointer; /* shows it’s clickable */
+    }
+    
+    .founder:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 0 12px var(--purple-accent), 0 20px 40px rgba(0,0,0,0.6);
+      border-color: var(--purple-accent);
     }
 
-    .founder h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .founder span {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
 
     .cta {
       text-align: center;
