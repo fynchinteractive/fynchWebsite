@@ -202,40 +202,44 @@
       border-top: 1px solid rgba(123,92,255,0.1);
     }
 
-    /* Image Carousel */
-  .carousel {
+     /* Carousel */
+    .carousel {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 2rem;
     padding-bottom: 1rem;
-    overflow-y: visible;
-  }
-  
-  .carousel-track {
+    overflow-y: visible; /* allow hover glow to show */
+    }
+    
+    .carousel-track {
     display: flex;
     gap: 1.5rem;
-    padding-bottom: 1rem;
-  }
-  
-  .carousel img {
-    position: relative;
-    z-index: 1;
+    }
+    
+    .carousel img {
     width: 320px;
     height: 180px;
     object-fit: cover;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.15);
     scroll-snap-align: center;
-    box-shadow: 0 0 20px rgba(255,255,255,0.08);
+    box-shadow: 0 0 30px rgba(123,92,255,0.5); /* stronger glow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 12px; /* extra space to prevent top clipping on hover */
-  }
-  
-  .carousel img:hover {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    }
+    
+    .carousel img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 60px rgba(123,92,255,0.8); /* stronger hover glow */
+    }
+    
+    .carousel img:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 30px rgba(255,255,255,0.25);
-  }
+    }
     
   </style>
 </head>
